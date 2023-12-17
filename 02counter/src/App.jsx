@@ -11,10 +11,21 @@ function App() {
   // let counter=15
 
   const addValue = () => {
-    if (counter < 20) {
+    if (counter < 30) {
       counter = counter + 1;
       console.log("clickedd", counter)
       setCounter(counter)
+    }
+  }
+
+  const addValuefour = () => {
+    if (counter < 30) {
+      // counter = counter + 1;
+      
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
     }
   }
 
@@ -34,11 +45,13 @@ function App() {
 
   return (
     <>
-      <h1>Chai or React</h1>
+      <h1>Chai or React Counter</h1>
       <p>Counter value : {counter}</p>
       <button onClick={addValue} >Add Value: to  {counter + 1}</button>
       <br />
       <button onClick={decValue}>Decrease Value: to  {counter - 1}</button>
+      <br />
+      <button onClick={addValuefour}>Add+4 Value: to  {counter +4}</button>
     </>
   )
 }
